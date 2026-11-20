@@ -44,6 +44,13 @@ The Python package must be importable by the Airflow worker. Spark code and depe
 
 An existing `SparkSession` can be passed explicitly using the `spark` argument. If omitted, `replicate()` obtains a session through `SparkSession.builder.getOrCreate()` and stops it when the call finishes.
 
+To run it from command line:
+
+python -m app.main \
+  --source "s3a://data-products/customers" \
+  --target-schema analytics \
+  --target-table customers
+
 ## Configuration
 
 The default configuration path is `config/config.yaml`. A different path can be passed using `config_path`.
