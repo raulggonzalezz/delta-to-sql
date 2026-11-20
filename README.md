@@ -46,10 +46,12 @@ An existing `SparkSession` can be passed explicitly using the `spark` argument. 
 
 To run it from command line:
 
+```python
 python -m app.main \
   --source "s3a://data-products/customers" \
   --target-schema analytics \
-  --target-table customers
+  --target-table customers`
+```
 
 ## Configuration
 
