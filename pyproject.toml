@@ -1,0 +1,18 @@
+[project]
+name = "delta-to-sql"
+version = "0.1.0"
+description = "Full-snapshot replication from Delta Lake on S3 to PostgreSQL"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "pyspark>=3.5,<4",
+    "delta-spark>=3.2,<4",
+    "psycopg[binary]>=3.2,<4",
+    "PyYAML>=6,<7",
+]
+
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/app"]
